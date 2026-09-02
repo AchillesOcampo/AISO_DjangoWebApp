@@ -7,7 +7,13 @@
 
     <h1>Registered Students</h1>
 
-    <a href="{% url 'create_student' %}">Register New Student</a>
+    <a href="{% url 'student_create' %}">
+        Register New Student
+    </a>
+
+    <a href="{% url 'student_dashboard' %}">
+        Student Dashboard
+    </a>
 
     <br><br>
 
@@ -19,11 +25,11 @@
             Year Level: {{ student.year_level }}<br>
             Email: {{ student.email }}<br>
 
-            <a href="{% url 'update_student' student.id %}">
+            <a href="{% url 'student_update' student.id %}">
                 Edit
             </a>
 
-            <a href="{% url 'delete_student' student.id %}">
+            <a href="{% url 'student_delete' student.id %}">
                 Delete
             </a>
         </div>

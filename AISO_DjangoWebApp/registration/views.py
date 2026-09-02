@@ -53,3 +53,17 @@ def delete_student(request, id):
     return render(request, "registration/student_confirm_delete.html", {
         "student": student
     })
+
+
+def student_dashboard(request):
+    students = Student.objects.all()
+    total_students = students.count()
+
+    return render(
+        request,
+        "registration/student_dashboard.html",
+        {
+            "total_students": total_students,
+            "students": students,
+        }
+    )
