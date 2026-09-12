@@ -13,4 +13,8 @@ from django.core.asgi import get_asgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'AISO_DjangoWebApp.settings')
 
-application = get_asgi_application()
+application = get_asgi_application()\
+
+LOGIN_REDIRECT_URL = "/registration/"
+LOGOUT_REDIRECT_URL = "/accounts/login/"
+
