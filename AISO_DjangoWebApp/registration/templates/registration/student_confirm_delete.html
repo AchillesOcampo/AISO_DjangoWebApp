@@ -12,13 +12,15 @@
         <strong>{{ student.student_name }}</strong>?
     </p>
 
-    <form method="POST">
+    <form method="post">
+
         {% csrf_token %}
 
-        <button type="submit">Yes, Delete</button>
-    </form>
+        <button type="submit">
+            Yes, Delete
+        </button>
 
-    <br>
+    </form>
 
     <a href="{% url 'student_list' %}">
         Cancel

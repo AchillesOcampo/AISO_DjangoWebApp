@@ -4,8 +4,20 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("home.urls")),
-    path("registration/", include("registration.urls")),
-    path("api/", include("registration.api_urls")),
-    path("accounts/", include("django.contrib.auth.urls")),
-]
+    path(
+        'registration/',
+        include('registration.urls')
+    ),
 
+    path(
+    'api/',
+    include('registration.api_urls')
+    ),
+    path(
+        'accounts/',
+        include('django.contrib.auth.urls')
+    ),
+
+
+
+]

@@ -4,8 +4,8 @@ from . import api_views
 
 urlpatterns = [
     path(
-        "students/",
+        'students/',
         api_views.api_student_list,
-        name="api_student_list"
+        name='api_student_list'
     ),
 ]

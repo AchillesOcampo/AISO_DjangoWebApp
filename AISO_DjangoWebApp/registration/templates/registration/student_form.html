@@ -7,17 +7,19 @@
 
     <h1>Student Registration</h1>
 
-    <form method="POST">
+    <form method="post">
         {% csrf_token %}
 
         {{ form.as_p }}
 
-        <button type="submit">Save Student</button>
+        <button type="submit">
+            Save
+        </button>
     </form>
 
-    <br>
-
-    <a href="{% url 'student_list' %}">View Students</a>
+    <a href="{% url 'student_list' %}">
+        Back to Student List
+    </a>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+# No database model is required for Module 02.
+# Database functionality will be introduced in a later module.

@@ -29,8 +29,5 @@ def api_student_list(request):
     ]
 
     return JsonResponse(
-        {
-            "count": len(data),
-            "students": data
-        }
+        {"count": len(data), "students": data}
     )
